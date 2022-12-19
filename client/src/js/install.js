@@ -24,12 +24,14 @@ butInstall.addEventListener('click', async function() {
     //console.log('👍', 'userChoice', result);
     // Reset the deferred prompt variable, it can only be used once.
     window.deferredPrompt = null;
-    butInstall.classList.add('hidden');
+    //butInstall.classList.add('hidden');
+    butInstall.style.display = 'none'
 });
 
 window.addEventListener('appinstalled', function(event) {
     // Clear prompt
     console.log('👍', 'appinstalled', event);
     window.deferredPrompt = null;
-    butInstall.classList.add('hidden');
+    //butInstall.classList.add('hidden');
+    butInstall.style.display = 'none'
 }); 
