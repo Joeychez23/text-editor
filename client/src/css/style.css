@@ -19,6 +19,10 @@
   h1 {
     font-size: 22px;
   }
+
+  .hidden {
+    display: none
+  }
   
   #navbar {
     height: var(--navbar-height);

@@ -4,6 +4,7 @@ const butInstall = document.getElementById('buttonInstall');
 // TODO: Add an event handler to the `beforeinstallprompt` event
 window.addEventListener('beforeinstallprompt', function(event) {
     event.preventDefault();
+    console.log(event)
     console.log('👍', 'beforeinstallprompt', event);
     // Store the triggered events
     window.deferredPrompt = event;
