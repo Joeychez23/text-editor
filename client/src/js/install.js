@@ -31,4 +31,5 @@ window.addEventListener('appinstalled', function(event) {
     // Clear prompt
     console.log('👍', 'appinstalled', event);
     window.deferredPrompt = null;
+    butInstall.classList.add('hidden');
 }); 
