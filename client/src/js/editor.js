@@ -50,6 +50,6 @@ export default class {
 
     setInterval(function() {
       putDb(localStorage.getItem('content'));
-    }, 10000)
+    }, 1000)
   }
 }
