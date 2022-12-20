@@ -32,14 +32,17 @@ export default class {
     async function setData() {
       const data = await getDb();
       console.info('Loaded data from IndexedDB, injecting into editor');
-      Editor.setValue(data || localData || header);
+      Editor.setValue(localData || data || header);
     }
     setData()
 
     
 
+    let count = 0
     Editor.on('change', function() {
-      localStorage.setItem('content', Editor.getValue());
+      console.log(`${count}`);
+      localStorage.setItem('content', Editor.getValue())
+      count++;
     });
 
     // Save the content of the editor when the editor itself is loses focus
@@ -47,5 +50,9 @@ export default class {
       console.log('The editor has lost focus');
       putDb(localStorage.getItem('content'));
     });
+
+    setInterval(function() {
+      putDb(localStorage.getItem('content'));
+    }, 10000)
   }
 }
