@@ -38,11 +38,8 @@ export default class {
 
     
 
-    let count = 0
     Editor.on('change', function() {
-      console.log(`${count}`);
       localStorage.setItem('content', Editor.getValue())
-      count++;
     });
 
     // Save the content of the editor when the editor itself is loses focus
