@@ -1,5 +1,5 @@
 // Import methods to save and get data from the indexedDB database in './database.js'
-import { getDb, putDb } from './database';
+import { getDb, putDb, initdb } from './database';
 import { header } from './header';
 
 export default class {
@@ -30,6 +30,7 @@ export default class {
     // When the editor is ready, set the value to whatever is stored in indexeddb.
     // Fall back to localStorage if nothing is stored in indexeddb, and if neither is available, set the value to header.
     async function setData() {
+      await initdb()
       const data = await getDb();
       console.info('Loaded data from IndexedDB, injecting into editor');
       Editor.setValue(localData || data || header);
@@ -43,13 +44,15 @@ export default class {
     });
 
     // Save the content of the editor when the editor itself is loses focus
-    Editor.on('blur', function() {
-      console.log('The editor has lost focus');
+    Editor.on('change', function() {
+      //console.log('The editor has lost focus');
       putDb(localStorage.getItem('content'));
     });
 
+
+    
     setInterval(function() {
       putDb(localStorage.getItem('content'));
-    }, 1000)
+    }, 10000)
   }
 }

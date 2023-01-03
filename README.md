@@ -11,16 +11,20 @@
 
 ## Description
 
+A text editor that is compiled using webpack to use localstorage, built in browser storage to store date.
+While also using caches to store 
+
 ## Installation
 
 
 ## Usage
 
-1. run "npm start" in terminal to begin
+1. clone repo --> run npm i
+2. run npm start
 
 ## Output
 
-Link: <a href="https://tech-blog-sql.herokuapp.com" target="_blank">https://tech-blog-sql.herokuapp.com/</a>
+Link: <a href="https://jate-test.herokuapp.com/" target="_blank">https://jate-test.herokuapp.com/</a>
 
 ## Contributors
 
@@ -32,6 +36,6 @@ Email: joeychez123@gmail.com
 
 Github: https://github.com/Joeychez23
 
-Repo: https://github.com/Joeychez23/tech-blog
+Repo: https://github.com/Joeychez23/text-editor
 
-Link: <a href="https://tech-blog-sql.herokuapp.com" target="_blank">https://tech-blog-sql.herokuapp.com/</a>
+Link: <a href="https://jate-test.herokuapp.com/" target="_blank">https://jate-test.herokuapp.com/</a>

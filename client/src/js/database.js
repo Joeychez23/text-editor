@@ -1,6 +1,7 @@
 import { openDB } from 'idb';
 
-async function initdb() {
+
+export async function initdb() {
   openDB('jate', 1, {
     upgrade(db) {
       if (db.objectStoreNames.contains('jate')) {
@@ -42,7 +43,8 @@ export async function getDb() {
   const request = store.getAll();
   // Get confirmation of the request.
   const result = await request;
-  //console.log('result.value', result);
+
+  console.log('result.value', result);
   if (result.length == 0) {
     return ''
   }
@@ -52,4 +54,3 @@ export async function getDb() {
   }
 }
 
-initdb();
