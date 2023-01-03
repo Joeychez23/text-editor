@@ -11,16 +11,18 @@
 
 ## Description
 
-A text editor that is compiled using webpack to use localstorage, built in browser storage to store date.
-While also using caches to store 
+A text editor that is compiled using webpack to use localstorage, and IndexedDB to storage to store data.
+While using caches to store runtime files so the service workers can operate while offline
+The site can also be installed to the desktop to be accessed as an app when needed
 
 ## Installation
+
+1. clone repo --> run npm i
 
 
 ## Usage
 
-1. clone repo --> run npm i
-2. run npm start
+1. run npm start
 
 ## Output
 
